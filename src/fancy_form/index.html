@@ -1,29 +1,93 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fancy Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+head{
+background-color:#d4af37;
+}
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:black;
+  background-image: url("Gold_Black_Shining_Deco_Background.JPG");
+  max-width: 100%;
+}
 
-  <!-- You may add more stuff here -->
-  <script src="script.js"></script>
-  <link href="style.css" rel="stylesheet" />
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  background-image: url("bit.JPG");
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  max-width: 100%;
+}
+
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 100%;
+  padding: 16px;
+  background-color: #dbc757;
+}
+
+
+input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.btn {
+  background-color: #cd7f32;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
 </head>
+<body >
 
-<body>
-
-  <!-- You may wrap the form in your own elements if necessary. -->
-  <form onsubmit="return !1">
+<h2 style="text-align:center"><font color="#d4af37">Send your Bit Coin easily!!</font></h2>
+<div class="bg-img">
+  <form action="/action_page.php" class="container"onsubmit="return !1">
     <label for="input-address">Bitcoin Address</label>
-    <input id="input-address" placeholder="16q4PinynazaMYfv24juNLkbjkDQxJo2dc" />
+    <input id="input-address" placeholder="16q4PinynazaMYfv24juNLkbjkDQxJo2dc" type="text" pattern="[A-Za-z0-9]+" title="Bitcoin address should be combination of Alphabets and numbers" required /><br />
 
     <label for="input-amount">Amount to send</label>
-    <input id="input-amount" placeholder="0.0000" />
+    <input id="input-amount" placeholder="0.0000"  type="text" pattern="[0-9.]+" title="Amount should be number" required />
+   <br />
 
     <label for="input-otp">OTP Authentication</label>
-    <input type="number" id="input-otp" placeholder="SMS OTP" />
+    <input id="input-otp" placeholder="SMS OTP" pattern="[0-9]+" required />
+    <br />
+     <br />
 
-    <button>SEND BTC</button>
+    <button type="submit" class="btn">SEND BTC</button>
+  
   </form>
-</body>
+</div>
 
+</body>
 </html>
