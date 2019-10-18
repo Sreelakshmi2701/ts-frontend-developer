@@ -73,7 +73,7 @@ input[type=text]:focus{
 <div class="bg-img">
   <form action="/action_page.php" class="container"onsubmit="return !1">
     <label for="input-address">Bitcoin Address</label>
-    <input id="input-address" placeholder="16q4PinynazaMYfv24juNLkbjkDQxJo2dc" type="text" pattern="[A-Za-z0-9]+" title="Bitcoin address should be combination of Alphabets and numbers" required /><br />
+    <input id="input-address" placeholder="16q4PinynazaMYfv24juNLkbjkDQxJo2dc" type="text" pattern="[A-Za-z0-9]+" title="Bitcoin address should be combination of Alphabets and numbers" minlength="25" maxlength="25" required /><br />
 
     <label for="input-amount">Amount to send</label>
     <input id="input-amount" placeholder="0.0000"  type="text" pattern="[0-9.]+" title="Amount should be numerical value" required />
